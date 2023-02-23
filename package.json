@@ -1,0 +1,46 @@
+{
+  "name": "goku-core",
+  "private": false,
+  "author": "William",
+  "version": "0.0.1",
+  "description": "工具库",
+  "type": "module",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.es.js",
+      "require": "./lib/index.umd.js"
+    }
+  },
+  "files": [
+    "./lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "coverage": "vitest run --coverage",
+    "build": "vue-tsc --noEmit && vite build",
+    "publish-main": "npm run build && npm publish",
+    "publish-beta": "npm run publish-main --tag beta",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.7",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.4",
+    "typescript": "^4.8.4",
+    "vite": "^3.2.0",
+    "vite-plugin-dts": "^1.6.6",
+    "vitest": "^0.24.3",
+    "vue": "^3.2.41",
+    "vue-tsc": "^1.0.9"
+  }
+}

@@ -1,0 +1,1 @@
+export { openLink } from "./basic";
